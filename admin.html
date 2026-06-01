@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="js/storage.js" defer></script>
+  <script src="js/news.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Panel de Administración</h1>
+
+    <nav class="nav">
+      <a href="index.html">Ver home</a>
+      <button id="logoutBtn" type="button">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="form-box">
+      <h2>Crear / modificar noticia</h2>
+
+      <form id="newsForm">
+        <input type="hidden" id="newsId">
+
+        <label for="title">Título</label>
+        <input type="text" id="title" placeholder="Título de la noticia" required>
+
+        <label for="description">Descripción</label>
+        <textarea id="description" placeholder="Descripción de la noticia" required></textarea>
+
+        <label for="image">URL de imagen</label>
+        <input type="url" id="image" placeholder="https://ejemplo.com/imagen.jpg" required>
+
+        <button type="submit">Guardar noticia</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Noticias cargadas</h2>
+      <div id="adminNewsContainer" class="news-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Trabajo Final - Taller de Internet 1</p>
+  </footer>
+</body>
+</html>

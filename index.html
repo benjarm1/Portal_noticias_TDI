@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Noticias</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/storage.js" defer></script>
+  <script src="js/news.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Portal de Noticias</h1>
+
+    <nav class="nav">
+      <a href="login.html">Administrador</a>
+      <button id="darkModeBtn" type="button">Modo oscuro</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="dolar-box" id="dolar">
+      <p>Cargando cotización del dólar...</p>
+    </section>
+
+    <section>
+      <h2>Últimas noticias</h2>
+      <div id="newsContainer" class="news-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Trabajo Final - Taller de Internet 1</p>
+  </footer>
+</body>
+</html>
