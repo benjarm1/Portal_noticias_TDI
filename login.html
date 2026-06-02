@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Administrador</title>
+  <title>Login Administradores</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/auth.js" defer></script>
 </head>
 <body>
   <header class="header">
-    <h1>Ingreso Administrador</h1>
+    <h1>Ingreso Administradores</h1>
 
     <nav class="nav">
-      <a href="index.html">Volver al home</a>
+      <a href="index.html">Volver al inicio</a>
     </nav>
   </header>
 
@@ -20,12 +20,12 @@
     <section class="form-box">
       <h2>Iniciar sesión</h2>
 
-      <form id="loginForm">
-        <label for="username">Usuario</label>
-        <input type="text" id="username" placeholder="Usuario" required>
+      <form id="formularioLogin">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name= "usuario" placeholder="Usuario" required>
 
         <label for="password">Contraseña</label>
-        <input type="password" id="password" placeholder="Contraseña" required>
+        <input type="password" id="password" name="password" placeholder="Contraseña" required>
 
         <button type="submit">Ingresar</button>
       </form>
@@ -33,14 +33,14 @@
       <p id="mensajeLogin" class="message"></p>
 
       <p class="help-text">
-        Usuario de prueba: <strong>emilys</strong><br>
-        Contraseña: <strong>emilyspass</strong>
+        Usuario de prueba: <strong>""</strong><br>
+        Contraseña: <strong>""</strong>
       </p>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Trabajo Final - Taller de Internet 1</p>
+    <p>Trabajo Final : Taller de Internet I</p>
   </footer>
 </body>
 </html>

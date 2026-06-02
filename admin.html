@@ -15,26 +15,26 @@
     <h1>Panel de Administración</h1>
 
     <nav class="nav">
-      <a href="index.html">Ver home</a>
-      <button id="logoutBtn" type="button">Cerrar sesión</button>
+      <a href="index.html">Ver inicio</a>
+      <button id="botonCerrarSesion" type="button">Cerrar sesión</button>
     </nav>
   </header>
 
   <main class="container">
     <section class="form-box">
-      <h2>Crear / modificar noticia</h2>
+      <h2>Crear / modificar noticias</h2>
 
-      <form id="newsForm">
-        <input type="hidden" id="newsId">
+      <form id="formularioNoticia">
+        <input type="hidden" id="noticiaId">
 
-        <label for="title">Título</label>
-        <input type="text" id="title" placeholder="Título de la noticia" required>
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" placeholder="Título de la noticia" required>
 
-        <label for="description">Descripción</label>
-        <textarea id="description" placeholder="Descripción de la noticia" required></textarea>
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" placeholder="Descripción de la noticia" required></textarea>
 
-        <label for="image">URL de imagen</label>
-        <input type="url" id="image" placeholder="https://ejemplo.com/imagen.jpg" required>
+        <label for="imagen">LINK de imagen</label>
+        <input type="url" id="imagen" placeholder="https://ejemplo.com/imagen.jpg" required>
 
         <button type="submit">Guardar noticia</button>
       </form>
@@ -42,13 +42,12 @@
 
     <section>
       <h2>Noticias cargadas</h2>
-      <div id="adminNewsContainer" class="news-grid"></div>
+      <div id="adminNoticiasContainer" class="noticias-grid"></div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Trabajo Final - Taller de Internet 1</p>
+    <p>Trabajo Final : Taller de Internet 1</p>
   </footer>
 </body>
 </html>
-|
