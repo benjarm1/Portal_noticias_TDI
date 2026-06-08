@@ -3,36 +3,333 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal de Noticias</title>
+  <title>Mundial 2026 News</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/storage.js" defer></script>
   <script src="js/news.js" defer></script>
   <script src="js/api.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
+
 <body>
   <header class="header">
-    <h1>Portal de Noticias</h1>
+    <h1>Mundial 2026</h1>
 
     <nav class="nav">
+      <a href="#noticias">Noticias</a>
+      <a href="#fixture">Fixture</a>
+      <a href="#grupos">Grupos</a>
+      <a href="#paises">Países</a>
+      <a href="#estadisticas">Estadísticas</a>
       <a href="login.html">Administrador</a>
+      <a href="#simbolos">Símbolos</a>
       <button id="darkModeBtn" type="button">Modo oscuro</button>
     </nav>
   </header>
 
   <main class="container">
-    <section class="dolar-box" id="dolar">
-      <p>Cargando cotización del dólar...</p>
+
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-tag">FIFA World Cup 2026</span>
+        <h2>Todo sobre el Mundial 2026 en un solo lugar</h2>
+        <p>Noticias, fixture, grupos, países participantes y estadísticas históricas de la Copa del Mundo.</p>
+        <a href="#noticias" class="hero-btn">Ver noticias</a>
+      </div>
     </section>
 
-    <section>
-      <h2>Últimas noticias</h2>
-      <div id="newsContainer" class="news-grid"></div>
+    <section class="highlight-box">
+      <h2>Partido destacado</h2>
+      <div class="match-card">
+        <div>
+          <h3>Argentina vs México</h3>
+          <p>Fase de grupos · Estadio por confirmar</p>
+        </div>
+        <span>12 JUN 2026</span>
+      </div>
     </section>
+
+    <section id="noticias" class="section">
+  <h2>Últimas noticias</h2>
+
+  <div id="newsContainer" class="news-grid">
+    <article class="news-card">
+      <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=900" alt="Estadio de fútbol">
+      <div class="news-card-content">
+        <h3>El Mundial 2026 será el primero con 48 selecciones</h3>
+        <p>La nueva edición tendrá 12 grupos de 4 equipos y una fase eliminatoria desde dieciseisavos.</p>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=900" alt="Hinchas en un estadio">
+      <div class="news-card-content">
+        <h3>Estados Unidos, México y Canadá serán los anfitriones</h3>
+        <p>Por primera vez, tres países organizarán juntos una Copa del Mundo masculina.</p>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=900" alt="Jugador de fútbol">
+      <div class="news-card-content">
+        <h3>Argentina llega como campeona defensora</h3>
+        <p>La Selección Argentina buscará defender el título conseguido en Qatar 2022.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+    <section id="fixture" class="section">
+      <h2>Fixture</h2>
+
+      <div class="fixture-grid">
+        <article class="fixture-card">
+          <span>Grupo A</span>
+          <h3>Canadá vs México</h3>
+          <p>11 de junio de 2026</p>
+        </article>
+
+        <article class="fixture-card">
+          <span>Grupo B</span>
+          <h3>Estados Unidos vs rival a definir</h3>
+          <p>12 de junio de 2026</p>
+        </article>
+
+        <article class="fixture-card">
+          <span>Grupo C</span>
+          <h3>Argentina vs rival a definir</h3>
+          <p>Fecha por confirmar</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="grupos" class="section">
+  <h2>Grupos</h2>
+
+  <div class="groups-grid">
+
+    <article class="group-card group-a">
+      <h3>Grupo A</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/mx.png">México</li>
+<li><img class="flag-img" src="https://flagcdn.com/w40/za.png">Sudáfrica</li>
+<li><img class="flag-img" src="https://flagcdn.com/w40/kr.png">Corea del Sur</li>
+<li><img class="flag-img" src="https://flagcdn.com/w40/cz.png">República Checa</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-b">
+      <h3>Grupo B</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/ca.png">Canadá</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/ba.png">Bosnia y Herzegovina</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/qa.png">Qatar</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/ch.png">Suiza</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-c">
+      <h3>Grupo C</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/br.png">Brasil</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/ma.png">Marruecos</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/ht.png">Haití</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/gb-sct.png">Escocia</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-d">
+      <h3>Grupo D</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/us.png">Estados Unidos</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/py.png">Paraguay</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/au.png">Australia</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/tr.png">Turquía</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-e">
+      <h3>Grupo E</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/de.png">Alemania</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/cw.png">Curazao</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/ci.png">Costa de Marfil</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/ec.png">Ecuador</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-f">
+      <h3>Grupo F</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/nl.png">Países Bajos</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/jp.png">Japón</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/se.png">Suecia</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/tn.png">Túnez</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-g">
+      <h3>Grupo G</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/be.png">Bélgica</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/eg.png">Egipto</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/ir.png">Irán</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/nz.png">Nueva Zelanda</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-h">
+      <h3>Grupo H</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/es.png">España</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/cv.png">Cabo Verde</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/sa.png">Arabia Saudita</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/uy.png">Uruguay</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-i">
+      <h3>Grupo I</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/fr.png">Francia</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/sn.png">Senegal</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/iq.png">Irak</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/no.png">Noruega</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-j">
+      <h3>Grupo J</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/ar.png">Argentina</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/dz.png">Argelia</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/at.png">Austria</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/jo.png">Jordania</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-k">
+      <h3>Grupo K</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/pt.png">Portugal</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/cd.png">RD Congo</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/uz.png">Uzbekistán</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/co.png">Colombia</li>
+      </ul>
+    </article>
+
+    <article class="group-card group-l">
+      <h3>Grupo L</h3>
+      <ul>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/gb.png">Inglaterra</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/hr.png">Croacia</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/gh.png">Ghana</li>
+        <li><img class="flag-img" src="https://flagcdn.com/w40/pa.png">Panamá</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+    <section id="paises" class="section">
+      <h2>Países anfitriones</h2>
+
+      <div class="countries-grid">
+        <article class="country-card">
+          <h3>Estados Unidos</h3>
+          <p>Principal sede del torneo, con varias ciudades anfitrionas.</p>
+        </article>
+
+        <article class="country-card">
+          <h3>México</h3>
+          <p>Primer país en organizar partidos de tres Mundiales diferentes.</p>
+        </article>
+
+        <article class="country-card">
+          <h3>Canadá</h3>
+          <p>Será una de las sedes principales del Mundial 2026.</p>
+        </article>
+      </div>
+    </section>
+
+<section id="simbolos" class="section">
+  <h2>Símbolos Oficiales</h2>
+
+  <div class="symbols-grid">
+
+    <article class="symbol-card">
+      <img src="img/symbols/mascotas-2026.jpg" alt="Mascotas oficiales">
+      <div class="symbol-content">
+        <span>Mascotas Oficiales</span>
+        <h3>Maple, Zayu y Clutch</h3>
+        <p>
+          Representan a Canadá, México y Estados Unidos, los tres países
+          organizadores del Mundial 2026.
+        </p>
+      </div>
+    </article>
+
+    <article class="symbol-card">
+      <img src="img/symbols/trionda.jpg" alt="Balón Adidas Trionda">
+      <div class="symbol-content">
+        <span>Balón Oficial</span>
+        <h3>Adidas Trionda</h3>
+        <p>
+          El balón oficial del torneo incorpora los colores de los países
+          anfitriones y tecnología de última generación.
+        </p>
+      </div>
+    </article>
+
+    <article class="symbol-card">
+      <img src="img/symbols/copa-mundial.jpg" alt="Copa Mundial FIFA">
+      <div class="symbol-content">
+        <span>Trofeo Oficial</span>
+        <h3>Copa Mundial FIFA</h3>
+        <p>
+          El trofeo más prestigioso del fútbol mundial, entregado al campeón
+          de cada Copa del Mundo.
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    <section id="estadisticas" class="section">
+      <h2>Estadísticas históricas</h2>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span>16</span>
+          <h3>Máximo goleador</h3>
+          <p>Miroslav Klose</p>
+        </article>
+
+        <article class="stat-card">
+          <span>5</span>
+          <h3>Más títulos</h3>
+          <p>Brasil</p>
+        </article>
+
+        <article class="stat-card">
+          <span>26</span>
+          <h3>Más partidos</h3>
+          <p>Lionel Messi</p>
+        </article>
+
+        <article class="stat-card">
+          <span>2</span>
+          <h3>Más expulsiones</h3>
+          <p>Varios jugadores</p>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
-    <p>Trabajo Final - Taller de Internet 1</p>
+    <p>Trabajo Final - Taller de Internet 1 · Portal Mundial 2026</p>
   </footer>
 </body>
 </html>
