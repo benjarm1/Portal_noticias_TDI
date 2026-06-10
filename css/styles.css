@@ -1,16 +1,7 @@
-:root {
-  --blue: #2457ff;
-  --red: #ff2d55;
-  --green: #00c853;
-  --orange: #ff8f00;
-  --dark: #0f172a;
-  --text: #111827;
-  --muted: #6b7280;
-  --light: #f5f7fa;
-  --white: #ffffff;
-  --shadow: 0 8px 24px rgba(15, 23, 42, 0.10);
-  --radius: 18px;
-}
+/* =========================
+   1. RESET GENERAL
+   Quitamos márgenes y paddings por defecto del navegador
+========================= */
 
 * {
   margin: 0;
@@ -18,294 +9,195 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* =========================
+   2. ESTILOS GENERALES
+   Estilos base para toda la página
+========================= */
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--light);
-  color: var(--text);
+  background-color: #f5f7fa;
+  color: #111827;
   line-height: 1.5;
 }
 
+h2 {
+  font-size: 32px;
+  margin-bottom: 22px;
+  font-weight: 900;
+}
+
+/* =========================
+   3. HEADER Y NAVEGACIÓN
+   Barra superior con menú
+========================= */
+
 .header {
-  background: var(--dark);
+  background-color: #0f172a;
   color: white;
   min-height: 80px;
   padding: 0 40px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 4px solid var(--blue);
+
+  border-bottom: 4px solid #2457ff;
 }
 
 .header h1 {
-  font-size: 1.8rem;
+  font-size: 30px;
   font-weight: 900;
   color: white;
-  white-space: nowrap;
 }
 
 .nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
 .nav a,
 #darkModeBtn {
   color: white;
   text-decoration: none;
+  background-color: transparent;
   border: none;
-  background: transparent;
-  font-size: 0.9rem;
+
+  font-size: 15px;
   font-weight: 700;
+
   padding: 10px 14px;
-  border-radius: 999px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: 0.25s;
 }
 
 .nav a:hover {
-  background: var(--blue);
+  background-color: #2457ff;
 }
 
 #darkModeBtn {
-  background: var(--red);
+  background-color: #ff2d55;
 }
 
 #darkModeBtn:hover {
-  background: #e11d48;
+  background-color: #e11d48;
 }
 
+/* =========================
+   4. CONTENEDOR PRINCIPAL
+   Limita el ancho del contenido y lo centra
+========================= */
+
 .container {
-  width: min(1200px, 92%);
+  width: 92%;
+  max-width: 1200px;
   margin: 32px auto;
 }
 
-.section,
-#noticias,
-#fixture,
-#grupos,
-#paises,
-#estadisticas {
+.section {
+  margin-top: 56px;
   scroll-margin-top: 120px;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 22px;
-  font-weight: 900;
+/* =========================
+   5. SECCIÓN DE BIENVENIDA
+   Texto introductorio de la página
+========================= */
+
+.welcome-section {
+  text-align: center;
+  background-color: white;
+  padding: 32px;
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
+  margin-bottom: 34px;
 }
 
-.hero {
-  min-height: 380px;
-  border-radius: 28px;
-  overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.28)),
-    url("https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=1400") center/cover;
-  display: flex;
-  align-items: center;
-  padding: 48px;
-  box-shadow: var(--shadow);
+.welcome-section h2 {
+  margin-bottom: 10px;
 }
 
-.hero-content {
-  max-width: 620px;
-  color: white;
+.welcome-section p {
+  font-size: 18px;
+  color: #6b7280;
 }
 
-.hero-tag {
-  display: inline-block;
-  background: var(--green);
-  color: #06210f;
-  font-weight: 900;
-  padding: 8px 14px;
-  border-radius: 999px;
-  margin-bottom: 18px;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
-
-.hero h2 {
-  font-size: clamp(2.2rem, 5vw, 4.3rem);
-  line-height: 1;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: #e5e7eb;
-  margin-bottom: 26px;
-}
-
-
-.hero-btn {
-  display: inline-block;
-  background: var(--orange);
-  color: white;
-  text-decoration: none;
-  padding: 14px 22px;
-  border-radius: 999px;
-  font-weight: 900;
-  transition: 0.25s;
-}
-
-.hero-btn:hover {
-  transform: translateY(-3px);
-  background: #f97316;
-}
-
-.highlight-box,
-.news-card,
-.fixture-card,
-.group-card,
-.country-card,
-.stat-card {
-  background: white;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.group-card li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 0;
-    border-bottom: 1px solid #e5e7eb;
-    font-weight: 700;
-}
-
-.groups-grid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.group-card {
-  padding: 24px 26px;
-}
-
-.group-card h3 {
-  margin-bottom: 22px;
-}
-
-.group-card li{
-    display:flex;
-    align-items:center;
-    padding:13px 0;
-    border-bottom:1px solid #e5e7eb;
-    font-weight:700;
-}
-
-.group-card li:last-child {
-  border-bottom: none;
-}
-
-
-.flag {
-  width: 36px;
-  height: 26px;
-  border-radius: 7px;
-  background: var(--blue);
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 900;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
-
-.flag-img{
-    width:28px;
-    height:20px;
-    object-fit:cover;
-    border-radius:4px;
-    margin-right:10px;
-    box-shadow:0 2px 4px rgba(0,0,0,.15);
-}
-
+/* =========================
+   6. TARJETA DE PRECIO
+   Card principal con información de precio destacada
+========================= */
 
 .highlight-box {
-  margin-top: 34px;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
   padding: 26px;
 }
 
-.match-card {
-  background: var(--dark);
+.price-card {
+  background-color: #0f172a;
   color: white;
-  border-radius: 20px;
+  border-left: 6px solid #ff2d55;
+  border-radius: 16px;
   padding: 24px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  border-left: 6px solid var(--red);
 }
 
-.match-card h3 {
-  font-size: 1.5rem;
+.price-card h3 {
+  font-size: 24px;
   margin-bottom: 6px;
 }
 
-.match-card p {
+.price-card p {
   color: #cbd5e1;
 }
 
-.match-card span {
-  background: var(--blue);
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 900;
-  white-space: nowrap;
+.price-values {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.news-grid,
-.fixture-grid,
-.groups-grid,
-.countries-grid,
-.stats-grid {
+.price-values span {
+  background-color: #2457ff;
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* =========================
+   7. NOTICIAS
+   Grilla de noticias con tarjetas
+========================= */
+
+#newsContainer {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.news-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.fixture-grid,
-.groups-grid,
-.countries-grid {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.stats-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
 .news-card {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
   overflow: hidden;
-  transition: 0.25s;
-}
-
-.news-card:hover,
-.fixture-card:hover,
-.group-card:hover,
-.country-card:hover,
-.stat-card:hover {
-  transform: translateY(-6px);
 }
 
 .news-card img {
   width: 100%;
-  height: 210px;
+  height: 160px;
   object-fit: cover;
+  display: block;
 }
 
 .news-card-content {
@@ -313,39 +205,73 @@ h2 {
 }
 
 .news-card h3 {
-  font-size: 1.25rem;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
 .news-card p {
-  color: var(--muted);
+  color: #6b7280;
 }
 
-.fixture-card,
-.group-card,
-.country-card,
-.stat-card {
-  padding: 24px;
-  transition: 0.25s;
+/* =========================
+   8. ESTADIOS
+   Estadios destacados del Mundial 2026
+========================= */
+
+.stadiums-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.fixture-card span {
-  display: inline-block;
-  color: var(--red);
-  font-weight: 900;
-  margin-bottom: 12px;
-  text-transform: uppercase;
+.stadium-card {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
-.fixture-card h3,
-.group-card h3,
-.country-card h3 {
+.stadium-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.stadium-card h3 {
+  padding: 20px 20px 10px;
+}
+
+.stadium-card p {
+  padding: 0 20px;
   margin-bottom: 10px;
+  color: #6b7280;
 }
 
-.fixture-card p,
-.country-card p {
-  color: var(--muted);
+.stadium-card p:last-child {
+  padding-bottom: 20px;
+}
+
+/* =========================
+   9. GRUPOS
+   Tarjetas con grupos y banderas
+========================= */
+
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+  gap: 24px;
+}
+
+.group-card {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.group-card h3 {
+  margin-bottom: 18px;
 }
 
 .group-card ul {
@@ -353,8 +279,12 @@ h2 {
 }
 
 .group-card li {
+  display: flex;
+  align-items: center;
+
   padding: 10px 0;
   border-bottom: 1px solid #e5e7eb;
+
   font-weight: 700;
 }
 
@@ -362,62 +292,74 @@ h2 {
   border-bottom: none;
 }
 
-.stat-card {
-  text-align: center;
+.flag-img {
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 1px solid #d1d5db;
 }
 
-.stat-card span {
-  display: block;
-  font-size: 3rem;
-  font-weight: 900;
-  color: var(--blue);
-}
-
-.stat-card h3 {
-  margin-bottom: 8px;
-}
-
-.stat-card p {
-  color: var(--muted);
-  font-weight: 700;
-}
 
 
 /* =========================
-   SIMBOLOS OFICIALES
+   10. PAÍSES ANFITRIONES
+   Cards de Estados Unidos, México y Canadá
+========================= */
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.country-card {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.country-card h3 {
+  margin-bottom: 10px;
+}
+
+.country-card p {
+  color: #6b7280;
+}
+
+/* =========================
+   11. SÍMBOLOS OFICIALES
+   Mascotas, balón oficial y copa
 ========================= */
 
 .symbols-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 26px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .symbol-card {
-  background: white;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
   overflow: hidden;
-  transition: 0.25s;
-}
-
-.symbol-card:hover {
-  transform: translateY(-6px);
 }
 
 .symbol-card img {
   width: 100%;
-  height: 240px;
+  height: 220px;
   object-fit: cover;
+  display: block;
 }
 
 .symbol-content {
-  padding: 24px;
+  padding: 20px;
 }
 
 .symbol-content span {
-  color: var(--red);
-  font-size: 0.8rem;
+  color: #ff2d55;
+  font-size: 14px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -427,81 +369,151 @@ h2 {
 }
 
 .symbol-content p {
-  color: var(--muted);
+  color: #6b7280;
 }
 
+/* =========================
+   12. ESTADÍSTICAS HISTÓRICAS
+   Cards con datos históricos
+========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 48px;
+  font-weight: 900;
+  color: #2457ff;
+}
+
+.stat-card h3 {
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+/* =========================
+   13. FOOTER
+   Pie de página
+========================= */
 
 .footer {
   margin-top: 70px;
-  background: var(--dark);
+  background-color: #0f172a;
   color: #cbd5e1;
   text-align: center;
   padding: 34px 20px;
-  border-top: 4px solid var(--blue);
+  border-top: 4px solid #2457ff;
 }
 
-/* Modo oscuro */
+/* =========================
+   14. MODO OSCURO
+   Clase agregada por JavaScript al body
+========================= */
 
 body.dark-mode {
-  background: #020617;
+  background-color: #020617;
   color: white;
 }
 
+body.dark-mode .welcome-section,
 body.dark-mode .highlight-box,
 body.dark-mode .news-card,
 body.dark-mode .fixture-card,
 body.dark-mode .group-card,
 body.dark-mode .country-card,
+body.dark-mode .symbol-card,
 body.dark-mode .stat-card {
-  background: #111827;
+  background-color: #111827;
   color: white;
 }
 
 body.dark-mode .news-card p,
 body.dark-mode .fixture-card p,
 body.dark-mode .country-card p,
+body.dark-mode .symbol-content p,
 body.dark-mode .stat-card p {
   color: #cbd5e1;
 }
 
 body.dark-mode .group-card li {
-  border-color: #334155;
+  border-bottom-color: #334155;
 }
 
-@media (max-width: 850px) {
+/* =========================
+   15. RESPONSIVE
+   Adaptación para pantallas más chicas
+========================= */
+
+@media (max-width: 900px) {
   .header {
-    padding: 18px 22px;
+    padding: 20px;
     flex-direction: column;
     align-items: flex-start;
   }
 
   .nav {
-    width: 100%;
+    flex-wrap: wrap;
   }
 
-  .hero {
-    padding: 32px 24px;
-    min-height: 320px;
+  #newsContainer,
+  .stadiums-grid,
+  .countries-grid,
+  .symbols-grid,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .match-card {
+  .groups-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-card {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
+  h2 {
+    font-size: 26px;
+  }
+
   .container {
     width: 94%;
   }
 
+  #newsContainer,
+  .stadiums-grid,
+  .groups-grid,
+  .countries-grid,
+  .symbols-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
   .nav a,
   #darkModeBtn {
-    font-size: 0.8rem;
+    font-size: 14px;
     padding: 8px 10px;
   }
 
-  h2 {
-    font-size: 1.6rem;
+  .price-card span {
+    margin-top: 10px;
   }
 }
