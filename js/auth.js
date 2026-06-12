@@ -37,4 +37,3 @@ form.addEventListener("submit", async (e) => {
     alert("Error, contraseña o usuario incorrecto");
   }
 });
-a
