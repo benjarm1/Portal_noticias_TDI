@@ -27,7 +27,8 @@ form.addEventListener("submit", async (e) => {
     const data = await response.json();
 
     
-    sessionStorage.setItem("admin", JSON.stringify(data));
+    sessionStorage.setItem("adminLogged", "true");
+    sessionStorage.setItem("adminUser", JSON.stringify(data));
 
     
     window.location.href = "admin.html";
