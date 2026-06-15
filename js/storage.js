@@ -1,18 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
+function setupNewsForm() {
   const form = document.getElementById("newsForm");
 
   if (!form) return;
 
-  const titleInput = document.getElementById("title");
-  const descriptionInput = document.getElementById("description");
-  const imageInput = document.getElementById("image");
-
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const title = titleInput.value.trim();
-    const description = descriptionInput.value.trim();
-    const image = imageInput.value.trim();
+    const title = document.getElementById("title").value.trim();
+    const description = document.getElementById("description").value.trim();
+    const image = document.getElementById("image").value.trim();
 
     if (!title || !description || !image) {
       alert("Completá todos los campos");
@@ -34,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
 
     renderNews("adminNewsContainer", true);
-    renderNews("newsContainer", false);
+
+    alert("Noticia guardada correctamente");
   });
-});
+}
+
+document.addEventListener("DOMContentLoaded", setupNewsForm);
