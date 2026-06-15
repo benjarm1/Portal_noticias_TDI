@@ -22,3 +22,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     arsElement.textContent = "ARS no disponible";
   }
 });
+// api actualizado
