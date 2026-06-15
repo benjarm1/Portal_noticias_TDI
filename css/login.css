@@ -1,0 +1,124 @@
+/* ==========================
+   LOGIN ADMINISTRADOR
+========================== */
+
+.form-box {
+    max-width: 450px;
+    margin: 70px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--dark);
+    font-size: 2rem;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-box label {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.form-box input {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    transition: all 0.25s ease;
+}
+
+.form-box input:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(36,87,255,0.15);
+}
+
+.form-box button {
+    margin-top: 10px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        90deg,
+        var(--blue),
+        var(--red)
+    );
+
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.form-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(36,87,255,0.25);
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.help-text {
+    margin-top: 25px;
+
+    background: #f5f7fa;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    color: #555;
+    font-size: 14px;
+}
+
+.help-text {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.help-text strong {
+    color: var(--blue);
+}
+
+.login-logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+/*centrar contenido en pantalla*/
+.container {
+    min-height: calc(100vh - 220px);
+}
