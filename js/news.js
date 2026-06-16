@@ -18,7 +18,7 @@ const defaultNews = [
     title: "Argentina llega como campeona defensora",
     description: "La Selección Argentina buscará defender el título conseguido en Qatar 2022.",
     image: "img/argentinacampeon2022.jpg"
-  }
+  },
   {id: 4,
    title: "Neymar se despide de la fase de grupos",
    description: "se confirmo la lesion del astro brasilero y es baja para los primero 3 partidos",
@@ -36,7 +36,7 @@ const defaultNews = [
     {
         id : 6,
         title:"Escocia tiene sed",
-        description:"Los hinchas escoceses que llegaro la mañana del miercoles a USA hicieron una queja comunitaria con la empresa que los llevo en avion debido a la escases de cerveza en el vuelo",
+        description:"Los hinchas escoceses que llegaron la mañana del miercoles a USA hicieron una queja comunitaria con la empresa que los llevo en avion debido a la escasez de cerveza en el vuelo",
         image: "https://c.files.bbci.co.uk/9ed3/live/23c0c780-1256-11f1-989c-0ff32e28c94c.jpg"
     }
 ];
