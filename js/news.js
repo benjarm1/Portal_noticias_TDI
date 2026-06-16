@@ -68,7 +68,7 @@ function renderNews(containerId, isAdmin = false) {
     article.className = "news-card";
 
     article.innerHTML = `
-      <img src="${item.image}" alt="${item.title}">
+      <img src="${item.image}" alt="${item.title}" onerror="this.src='img/copa-mundial.jpg'">
       <div class="news-card-content">
         <h3>${item.title}</h3>
         <p>${item.description}</p>
