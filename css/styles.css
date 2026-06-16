@@ -434,7 +434,7 @@ body.dark-mode {
 body.dark-mode .welcome-section,
 body.dark-mode .highlight-box,
 body.dark-mode .news-card,
-body.dark-mode .fixture-card,
+body.dark-mode .stadium-card,
 body.dark-mode .group-card,
 body.dark-mode .country-card,
 body.dark-mode .symbol-card,
@@ -444,7 +444,7 @@ body.dark-mode .stat-card {
 }
 
 body.dark-mode .news-card p,
-body.dark-mode .fixture-card p,
+body.dark-mode .stadium-card p,
 body.dark-mode .country-card p,
 body.dark-mode .symbol-content p,
 body.dark-mode .stat-card p {
