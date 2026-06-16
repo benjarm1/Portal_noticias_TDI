@@ -40,7 +40,6 @@ const defaultNews = [
         image: "https://c.files.bbci.co.uk/9ed3/live/23c0c780-1256-11f1-989c-0ff32e28c94c.jpg"
     }
 ];
-
 function getNews() {
   const savedNews = localStorage.getItem(NEWS_KEY);
 
