@@ -85,6 +85,23 @@ function renderNews(containerId, isAdmin = false) {
       });
 
       article.appendChild(deleteButton);
+      const editButton = document.createElement("button");
+editButton.textContent = "Editar";
+editButton.type = "button";
+
+editButton.addEventListener("click", () => {
+  document.getElementById("newsId").value = item.id;
+  document.getElementById("title").value = item.title;
+  document.getElementById("description").value = item.description;
+  document.getElementById("image").value = item.image;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+article.appendChild(editButton);
     }
 
     container.appendChild(article);
