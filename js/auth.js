@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await response.json();
 
-      sessionStorage.setItem("adminLogged", "true");
-      sessionStorage.setItem("adminUser", JSON.stringify(data));
+      localStorage.setItem("adminLogged", "true");
+      localStorage.setItem("adminUser", JSON.stringify(data));
 
       window.location.href = "admin.html";
     } catch (error) {
