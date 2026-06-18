@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Administrador</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/login.css">
   <script src="js/auth.js" defer></script>
 </head>
 <body>
@@ -18,25 +19,29 @@
 
   <main class="container">
     <section class="form-box">
-      <h2>Iniciar sesión</h2>
+    <h2>Iniciar sesión</h2>
 
-      <form id="loginForm">
-        <label for="username">Usuario</label>
-        <input type="text" id="username" placeholder="Usuario" required>
+    <img src="img/copa-mundial.jpg"
+         class="login-logo"
+         alt="Copa Mundial">
 
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" placeholder="Contraseña" required>
+    <form id="loginForm">
+      <label for="username">Usuario</label>
+      <input type="text" id="username" placeholder="Usuario" required>
 
-        <button type="submit">Ingresar</button>
-      </form>
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" placeholder="Contraseña" required>
 
-      <p id="mensajeLogin" class="message"></p>
+      <button type="submit">Ingresar</button>
+    </form>
 
-      <p class="help-text">
-        Usuario de prueba: <strong>emilys</strong><br>
-        Contraseña: <strong>emilyspass</strong>
-      </p>
-    </section>
+    <p id="mensajeLogin" class="message"></p>
+
+    <p class="help-text">
+      Usuario de prueba: <strong>emilys</strong><br>
+      Contraseña: <strong>emilyspass</strong>
+    </p>
+  </section>
   </main>
 
   <footer class="footer">
