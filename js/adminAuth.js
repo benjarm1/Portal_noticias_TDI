@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const isLogged = sessionStorage.getItem("adminLogged");
+  const isLogged = localStorage.getItem("adminLogged");
 
   if (isLogged !== "true") {
     window.location.href = "login.html";
