@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
-      sessionStorage.removeItem("adminLogged");
-      sessionStorage.removeItem("adminUser");
+      localStorage.removeItem("adminLogged");
+      localStorage.removeItem("adminUser");
 
       window.location.href = "login.html";
     });
