@@ -6,6 +6,7 @@ function setupNewsForm() {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    const newsId = document.getElementById("newsId").value;
     const title = document.getElementById("title").value.trim();
     const description = document.getElementById("description").value.trim();
     const image = document.getElementById("image").value.trim();
@@ -17,21 +18,40 @@ function setupNewsForm() {
 
     const news = getNews();
 
-    const newNews = {
-      id: Date.now(),
-      title: title,
-      description: description,
-      image: image
-    };
+    if (newsId) {
+      const updatedNews = news.map((item) => {
+        if (item.id === Number(newsId)) {
+          return {
+            id: item.id,
+            title: title,
+            description: description,
+            image: image
+          };
+        }
 
-    news.push(newNews);
-    saveNews(news);
+        return item;
+      });
+
+      saveNews(updatedNews);
+      alert("Noticia modificada correctamente");
+    } else {
+      const newNews = {
+        id: Date.now(),
+        title: title,
+        description: description,
+        image: image
+      };
+
+      news.push(newNews);
+      saveNews(news);
+      alert("Noticia guardada correctamente");
+    }
 
     form.reset();
+    document.getElementById("newsId").value = "";
 
+    renderNews("newsContainer", false);
     renderNews("adminNewsContainer", true);
-
-    alert("Noticia guardada correctamente");
   });
 }
 
